@@ -90,7 +90,7 @@ const About = () => {
           <FounderColumn>
             <FounderName>Sanjyotee</FounderName>
             <LinkedInLink
-              href="https://www.linkedin.com/in/sanjyotee"
+              href="https://www.linkedin.com/in/sanjyotee-patil-aaa0a8250/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -100,7 +100,7 @@ const About = () => {
           <FounderColumn>
             <FounderName>Sanat</FounderName>
             <LinkedInLink
-              href="https://www.linkedin.com/in/sanat"
+              href="https://www.linkedin.com/in/sanatl/"
               target="_blank"
               rel="noopener noreferrer"
             >
