@@ -95,7 +95,7 @@ const HeroSection = () => {
         </Subtitle>
         <ButtonContainer>
           <Button onClick={() => scrollToSection('cta')}>Join Our Heartwarming Journey</Button>
-          <Button onClick={() => scrollToSection('features')}>Discover Our Magic</Button>
+          {/* <Button onClick={() => scrollToSection('features')}>Discover Our Magic</Button> */}
         </ButtonContainer>
       </Content>
     </Hero>

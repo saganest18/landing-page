@@ -101,8 +101,6 @@ const Header = () => {
         <NavLinkStyled to="/" onClick={handleLinkClick}>
           Home
         </NavLinkStyled>
-        {/* Removed About and Contact links as requested */}
-        {/* In-page anchors (when on the landing page) */}
         <NavAnchor href="/#features" onClick={handleLinkClick}>
           Features
         </NavAnchor>
@@ -115,6 +113,9 @@ const Header = () => {
         <NavAnchor href="/#cta" onClick={handleLinkClick}>
           Get Started
         </NavAnchor>
+        <NavLinkStyled to="/about" onClick={handleLinkClick}>
+          About
+        </NavLinkStyled>
       </NavLinks>
     </Navbar>
   );
