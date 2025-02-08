@@ -1,3 +1,4 @@
+// src/components/Footer.js
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
@@ -41,34 +42,6 @@ const SocialMedia = styled.div`
   }
 `;
 
-const SubscribeForm = styled.form`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-
-  input {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 50px 0 0 50px;
-    min-width: 200px;
-  }
-
-  button {
-    padding: 0.5rem 1rem;
-    background-color: #d96b74;
-    border: none;
-    border-radius: 0 50px 50px 0;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-    &:hover {
-      background-color: #c85b63;
-    }
-  }
-`;
-
 const Footer = () => {
   return (
     <FooterContainer>
@@ -89,13 +62,6 @@ const Footer = () => {
           <FaInstagram />
         </a>
       </SocialMedia>
-      <div>
-        <p>Subscribe for the latest heartwarming updates:</p>
-        <SubscribeForm onSubmit={(e) => e.preventDefault()}>
-          <input type="email" placeholder="Enter your email" />
-          <button type="submit">Subscribe</button>
-        </SubscribeForm>
-      </div>
     </FooterContainer>
   );
 };

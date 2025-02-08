@@ -11,7 +11,7 @@ const Contact = () => {
     <ContactContainer>
       <h1>Contact Us</h1>
       <p>
-        For inquiries or support, please reach out at <strong>contact@saganest.com</strong>.
+        For inquiries or support, please reach out at <strong>saganest18@gmail.com</strong>.
       </p>
       {/* Add a contact form or additional details as needed */}
     </ContactContainer>

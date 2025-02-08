@@ -1,3 +1,4 @@
+// src/components/CallToActionSection.js
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -54,44 +55,23 @@ const Button = styled.button`
   }
 `;
 
-const SuccessMessage = styled.p`
-  color: #2e7d32;
-  margin-top: 1rem;
-  font-weight: bold;
-`;
-
 const CallToActionSection = () => {
   const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      // Replace with your actual backend API endpoint.
-      const response = await fetch('https://api.example.com/join', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-      });
-      if (response.ok) {
-        setSubmitted(true);
-        setEmail('');
-      } else {
-        setError('There was an error. Please try again.');
-      }
-    } catch (err) {
-      console.error(err);
-      setError('There was an error. Please try again.');
-    }
-    setTimeout(() => setSubmitted(false), 5000);
+    // Optionally store the email (e.g., in localStorage)
+    localStorage.setItem('userEmail', email);
+    // Redirect the user to the Google Form with the email as a query parameter if desired
+    window.location.href =
+      'https://forms.gle/u3ZKniaVescREiM4A';
   };
 
   return (
     <CallToAction id="cta">
       <h2>Join Our Heartwarming Journey</h2>
       <p>
-        Sign up now to receive exclusive updates and be the first to experience your personalized storybook—a keepsake that celebrates life’s most beautiful moments.
+        Sign up now to receive exclusive updates and to take the next step in creating your personalized storybook.
       </p>
       <Form onSubmit={handleSubmit}>
         <Input
@@ -103,8 +83,6 @@ const CallToActionSection = () => {
         />
         <Button type="submit">Join Now</Button>
       </Form>
-      {submitted && <SuccessMessage>Thank you for registering! A confirmation email has been sent to your inbox.</SuccessMessage>}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
     </CallToAction>
   );
 };

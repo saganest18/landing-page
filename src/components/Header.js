@@ -1,3 +1,4 @@
+// src/components/Header.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -90,16 +91,17 @@ const Header = () => {
   return (
     <Navbar>
       <Logo>SagaNest</Logo>
-      <Hamburger onClick={() => setMenuOpen(!menuOpen)}>
+      <Hamburger
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+      >
         {menuOpen ? <FaTimes /> : <FaBars />}
       </Hamburger>
       <NavLinks open={menuOpen}>
         <NavLinkStyled to="/" onClick={handleLinkClick}>
           Home
         </NavLinkStyled>
-        <NavLinkStyled to="/about" onClick={handleLinkClick}>
-          About
-        </NavLinkStyled>
+        {/* Removed About and Contact links as requested */}
         {/* In-page anchors (when on the landing page) */}
         <NavAnchor href="/#features" onClick={handleLinkClick}>
           Features
@@ -113,9 +115,6 @@ const Header = () => {
         <NavAnchor href="/#cta" onClick={handleLinkClick}>
           Get Started
         </NavAnchor>
-        <NavLinkStyled to="/contact" onClick={handleLinkClick}>
-          Contact
-        </NavLinkStyled>
       </NavLinks>
     </Navbar>
   );
